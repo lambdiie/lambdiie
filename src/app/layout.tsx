@@ -3,27 +3,25 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
+	variable: "--font-jetbrains-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "lambdiieOS",
-  description: "lambdiie's personal website",
+	title: "lambdiieOS",
+	description: "lambdiie's personal website",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${jetBrainsMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${jetBrainsMono.variable} antialiased`}>
+				{children}
+			</body>
+		</html>
+	);
 }
